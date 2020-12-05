@@ -1,3 +1,17 @@
+export const ABOUT_ME = {
+  title: "Hi there!",
+  subtitle: `
+  I am a Full Stack Developer, especially with JavaScript, 
+  especially with technologies like React.js, Node.js, MongoDB, 
+  Express, Git and more.`,
+  content: `I am a multifaceted person, in addition to web development, 
+    swimming teaching, is another of my passions. That doesn't limit 
+    me to practicing almost any other activity, especially outdoors.
+     Hiking, mountaineering, camping, city or mountain bike, he recently 
+    discovered sandboarding in the sand dunes of La Paz, B.C.S.`,
+
+  images: [],
+};
 export const TECHS = [
   {
     title: "HTML 5",
