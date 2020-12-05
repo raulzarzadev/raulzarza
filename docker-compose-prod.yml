@@ -1,0 +1,7 @@
+version: "3.3"
+
+services:
+  rz:
+    ports:
+      - 4300:3000
+    build: .
