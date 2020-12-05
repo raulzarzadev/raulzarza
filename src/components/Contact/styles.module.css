@@ -1,0 +1,25 @@
+.contact {
+    text-align: center;
+}
+
+.contact__title {
+    margin: var(--space4);
+}
+
+.contact__item {
+    margin: var(--space4) auto;
+    width: 200px;
+
+}
+
+.contact__item:hover {
+    box-shadow: var(--box-shadow);
+}
+
+
+
+.contact__item_icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto
+}

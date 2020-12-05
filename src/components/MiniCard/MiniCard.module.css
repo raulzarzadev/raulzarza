@@ -1,0 +1,43 @@
+.tecs__card {
+  width: 130px;
+  height: 180px;
+  margin: var(--space2);
+  border-radius: var(--space2);
+  padding: var(--space1);
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: var(--box-shadow);
+}
+
+.tecs__card_icon  {
+  width: 90%;
+  height: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tecs__card_link {
+  text-align: end;
+  margin: var(--space1);
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tecs__card_icon img {
+  height: 70px;
+  margin: 0 auto;
+}
+
+.tecs__card_action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 30%;
+}
+
+/* TECS end */

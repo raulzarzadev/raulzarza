@@ -1,0 +1,57 @@
+.details {
+    background-color: #fff;
+    border-radius: var(--space2);
+    padding: var(--space4);
+    margin: var(--space4) auto;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .details {
+        width: 60%;
+    }
+}
+
+
+.details__techs_container {
+    display: flex;
+    overflow-x: auto;
+}
+
+.details__techs_container_item {
+    border-radius: var(--space2);
+    box-shadow: var(--box-shadow);
+    min-width: 70px;
+    min-height: 90px;
+    margin: var(--space2);
+    display: block;
+    text-align: center;
+    padding-top: var(--space1);
+  
+}
+
+
+.details__link {
+    text-align: end;
+    margin: var(--space4) 0;
+}
+
+.details__link_a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.details__images_container {
+    display: flex;
+    overflow-y: auto;
+}
+
+.details__images_container_item {
+    min-width: 160px;
+    min-height: 160px;
+    border-radius: var(--space2);
+    margin: var(--space2);
+    box-shadow: var(--box-shadow);
+}

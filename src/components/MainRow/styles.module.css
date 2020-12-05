@@ -1,0 +1,9 @@
+.section__index {
+    max-width: 600px;
+    margin: var(--space6) auto;
+}
+
+.section__index_row {
+    display: flex;
+    overflow-y: auto;
+}

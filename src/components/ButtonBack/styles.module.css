@@ -1,0 +1,15 @@
+.button {
+    border: none;
+    display: flex;
+    padding: var(--space2);
+    border-radius: var(--space2);
+    box-shadow: var(--box-shadow);
+}
+
+.button:hover {
+    box-shadow: var(--box-shadow2);
+}
+
+.button:active {
+    background-color: var(--secondary);
+}
