@@ -9,7 +9,7 @@ export default function Contact() {
       <Head>
         <title>Raúl Zarza Contact</title>
       </Head>
-      <ContactMe />;
+      <ContactMe />
     </>
   );
 }

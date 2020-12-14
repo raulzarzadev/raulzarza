@@ -11,9 +11,7 @@ export default function ButtonBack() {
       <div className={styles.button__icon}>
         <Image src="/icons/previous.svg" width={30} height={30} />
       </div>
-      <div className={styles.button__text}>
-        <h3>Back</h3>
-      </div>
+      <p className={styles.button__text}>back</p>
     </button>
   );
 }

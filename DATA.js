@@ -111,6 +111,26 @@ export const TECHS = [
 ];
 export const WORKS = [
   {
+    ref: "nomadas",
+    title: "nomadasgroup",
+    icon: "/icons/works/nomadas-negro.png",
+    url: "/details/nomadas",
+    resume: {
+      title: "nomadasgroup",
+      content: `
+      noamdasgroup es una pagina web estatica y la puerta de entrada a un grupo de servicios en torno al turismo y el turismo sustentable. 
+      Implementa tecnologia de contenedores para desarrollo y produccion, CSS puro, NEXTjs . `,
+      link: "https://www.nomadasgroup.com.mx",
+      technologies: ["NEXT", "REACT", "CSS", "JS", "DOCKER", "GIT"],
+      images: [
+        "/images/nomadas/NOMADAS.png",
+        "/images/nomadas/negro.png",
+        "/images/nomadas/NOMADA BLANCO.png",
+        "/images/nomadas/guia_nomadas.png",
+      ]
+    },
+  },
+  {
     ref: "packshoe",
     title: "packshoe",
     icon: "/icons/works/navBarBanner.png",

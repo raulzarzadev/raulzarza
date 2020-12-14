@@ -2,10 +2,9 @@ version: "3.8"
 
 services:
   raulzarza:
-    image: "raulzarza/rz:v2.1"
-    restart: "always"
+    
     ports:
-      - 4300:3000
+      - 3000:3000
     build: .
     volumes:
       - .:/usr/src/app

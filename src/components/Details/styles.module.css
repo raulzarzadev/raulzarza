@@ -28,7 +28,10 @@
     display: block;
     text-align: center;
     padding-top: var(--space1);
-  
+}
+
+.details__content_description{
+    white-space:pre-line ;
 }
 
 

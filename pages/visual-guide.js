@@ -9,8 +9,6 @@ export default function VisualGuide() {
         <title>Guía viusal</title>
       </Head>
       <GridGuide/>
-
-      
     </div>
   );
 }

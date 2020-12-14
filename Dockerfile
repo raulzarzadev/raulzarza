@@ -1,11 +1,12 @@
-FROM raulzarza/rz:v2.1
+FROM node:slim
 
-ENV PORT 3000
 
 #Create Work directory
-WORKDIR /usr/src/app
+RUN mkdir -p /usr/src/app
+WORKDIR  /usr/src/app
 
 #Instal dependecies
+COPY ./ ./
 
 RUN yarn
 
@@ -13,8 +14,9 @@ RUN yarn
 
 #build app
 RUN yarn run build
+
 EXPOSE 3000
 
 #Run the app
 
-CMD "yarn" "run" "start"
+CMD "yarn" "dev"

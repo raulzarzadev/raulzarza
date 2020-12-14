@@ -15,7 +15,9 @@ export default function Details({ data = {} }) {
         <h2>{data.title}</h2>
       </div>
       <div className={styles.details__content}>
-        <p>{data.content}</p>
+        <p className={styles.details__content_description}>
+          {data.content}
+        </p>
       </div>
 
       <div className={styles.details__techs}>

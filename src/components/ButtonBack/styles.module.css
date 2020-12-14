@@ -4,6 +4,7 @@
     padding: var(--space2);
     border-radius: var(--space2);
     box-shadow: var(--box-shadow);
+    align-items: center;
 }
 
 .button:hover {
@@ -12,4 +13,9 @@
 
 .button:active {
     background-color: var(--secondary);
+}
+
+.button__text {
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
