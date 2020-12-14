@@ -6,6 +6,7 @@ import MyLink from "../src/components/MyLink/MyLink";
 
 import { TECHS } from "../DATA";
 import { WORKS } from "../DATA";
+import Section from "../src/components/Section";
 
 export default function Home() {
   return (
@@ -29,9 +30,9 @@ export default function Home() {
         </section>
 
         <section>
-          <h2 style={{ textAlign: "center", margin: "3rem" }}>
+          <Section>
             <MyLink href="/contact">Contact me</MyLink>
-          </h2>
+          </Section>
         </section>
       </div>
     </div>

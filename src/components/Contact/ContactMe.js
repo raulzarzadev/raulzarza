@@ -1,11 +1,14 @@
 import Image from "next/image";
 import React from "react";
+import Section from "../Section";
 import styles from "./styles.module.css";
 
 export default function ContactMe() {
   return (
     <div className={styles.contact}>
-      <h2 className={styles.contact__title}>Contact me</h2>
+      <Section>
+        <h2>Contact me</h2>
+      </Section>
       <div className={styles.contact__item}>
         <a
           className={styles.contact__item_link}
@@ -22,6 +25,7 @@ export default function ContactMe() {
           by email
         </a>
       </div>
+
       <div className={styles.contact__item}>
         <a
           className={styles.contact__item_link}
@@ -70,6 +74,7 @@ export default function ContactMe() {
           Find me on linkedin
         </a>
       </div>
+
       <div className={styles.contact__item}>
         <a className={styles.contact__item_link} href="">
           <div className={styles.contact__item_icon}>

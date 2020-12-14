@@ -4,6 +4,7 @@
 
 .abstract__title {
     padding: 0 var(--space6);
+    color: var(--primary);
 }
 
 .abstract__subtitle {

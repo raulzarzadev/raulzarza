@@ -3,7 +3,7 @@ import MyLink from "../MyLink";
 import styles from "./footer.module.css";
 export default function Footer() {
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
       <div className={styles.footer__grid}>
         <div className={styles.footer__grid_item}>
           <nav className={styles.nav}>
@@ -29,19 +29,19 @@ export default function Footer() {
           </nav>
         </div>
         <div className={styles.footer__grid_item}>
-          <div style={{ textAlign: "center" }}>
-            Icons made by{" "}
-            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
+          <div className={styles.icons}>
+            Icons made by
+            <a style={{fontSize:'inherit'}} href="https://www.flaticon.com/authors/freepik" title="Freepik">
               Freepik
-            </a>{" "}
-            from{" "}
-            <a href="https://www.flaticon.com/" title="Flaticon">
+            </a>
+            from
+            <a style={{fontSize:'inherit'}} href="https://www.flaticon.com/" title="Flaticon">
               www.flaticon.com
             </a>
           </div>
         </div>
         <div className={styles.footer__grid_item}></div>
       </div>
-    </div>
+    </footer>
   );
 }

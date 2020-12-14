@@ -1,17 +1,16 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    color: var(--text-primary);
-    min-height: 250px;
-    background: linear-gradient(180deg, rgba(4, 4, 4, 1) 0%, rgba(233, 255, 255, 0) 100%);
-    color: var(--text-secondary);
-    margin-bottom: -150px;
-  }
-  
-  .container {
-    /*  background-color: red; */
-    min-height: calc(100vh - 200px);
-    padding: var(--space1) var(--space4);
-    margin-bottom: var(--space4);
-  }
-  
+.container {
+  /*  background-color: red; */
+  min-height: calc(100vh - 200px);
+  margin-bottom: var(--space4);
+}
+
+/* .main_background{
+ z-index: -1;
+} */
+
+ .main {
+  background-image: url("/picina.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(red, green, blue, 0.3);
+} 

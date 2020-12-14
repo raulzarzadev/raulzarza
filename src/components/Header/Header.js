@@ -7,11 +7,11 @@ console.log(styles);
 export default function Header() {
   return (
     <>
-      <div className={styles.header}>
+      <header className={styles.header}>
         <div className={styles.header__item}>
           <div className={styles.header__item_image}>
             <Image
-              src="/RZ-sinfondo.svg"
+              src="/RZ-blanco.svg"
               alt="logo-header"
               height={70}
               width={70}
@@ -33,7 +33,7 @@ export default function Header() {
             </ul>
           </nav>
         </div>
-      </div>
+      </header>
     </>
   );
 }

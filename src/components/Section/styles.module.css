@@ -1,0 +1,11 @@
+.section {
+    width: 100%;
+    min-height: 120px;
+    background-color: var(--primary);
+    padding: var(--space2);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: .7;
+    margin: 2rem 0;
+}

@@ -1,6 +1,9 @@
 .about {
     margin: 0 auto;
     width: 100%;
+    background-color: var(--primary);
+    padding: var(--space2);
+    border-radius: var(--space2);
 }
 
 @media screen and (min-width:600px) {
