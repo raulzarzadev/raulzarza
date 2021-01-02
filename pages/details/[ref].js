@@ -21,3 +21,5 @@ export default function Details() {
 }
 
 Details.Layout = Layout;
+
+ // In a file, far, far, away module.exports = function(dependencyA, dependencyB) { dependencyA(); dependencyB(); } // In another file, the `caller` // This is where the actual, concrete implementation is stonetworking var depA = someConcreteImplementation; var depB = someOtherConcreteImplementation; var someModule = require('pathToSomeModule'); someModule(depA, depB); 
