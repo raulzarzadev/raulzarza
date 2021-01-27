@@ -159,8 +159,7 @@ export const WORKS = [
     url: "/details/packshoe",
     resume: {
       title: "Packshoe",
-      content: `Packshoe es es una SPA enfocada en proporcionar un servicio
-       que permita unir a zapateros con clientes`,
+      content: `Packshoe es es una SPA que permite unir a zapateros con clientes`,
       link: "https://www.packshoe.com",
       technologies: ["LAMDA", "BB", "REACT", "MUI", "GQL"],
       images: [
