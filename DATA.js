@@ -98,11 +98,7 @@ export const TECHS = [
     icon: "/icons/techs/lamda.png",
     ref: "LAMDA",
   },
-  {
-    title: "GRAPHQL",
-    icon: "/icons/techs/graphql.svg",
-    ref: "GQL",
-  },
+  
   {
     title: "Inkascape",
     icon: "/icons/techs/inkascape.png",
@@ -110,6 +106,32 @@ export const TECHS = [
   },
 ];
 export const WORKS = [
+  {
+    ref: "ranchito",
+    title: "Mi Ranchito Digital",
+    icon: "",
+    url: "/details/ranchito",
+    resume: {
+      title: "Mi Ranchito Digital",
+      content: `
+      El problema:
+      Un veterinario/granjero olvida las fechas en las que su vaca lechera debe parir o ser inseminada
+      Propuesta: 
+      Mantener informado al veterinario/granjero de las datos importantes para relizar un mejor trabajo 
+      Consideraciones:
+      - Debe ser extremadamente sencillo
+      - Trabajar sin conexión
+      `,
+      link: "https://miranchito.digital",
+      technologies: ["NEXT"],
+      images: [
+        "/images/ranchito/ranchito_1.png",
+        "/images/ranchito/ranchito.png",
+        "/images/ranchito/prox.png",
+        "/images/ranchito/history.png",
+      ],
+    },
+  },
   {
     ref: "nomadas",
     title: "nomadasgroup",
@@ -127,7 +149,7 @@ export const WORKS = [
         "/images/nomadas/negro.png",
         "/images/nomadas/NOMADA BLANCO.png",
         "/images/nomadas/guia_nomadas.png",
-      ]
+      ],
     },
   },
   {
@@ -247,3 +269,9 @@ export const WORKS = [
     },
   },
 ];
+
+export const LEARNING = [{
+  title: "GRAPHQL",
+  icon: "/icons/techs/graphql.svg",
+  ref: "GQL",
+},];

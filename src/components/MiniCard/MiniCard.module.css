@@ -1,7 +1,9 @@
+.tecs{
+  margin: var(--space2);
+}
 .tecs__card {
   width: 130px;
   height: 180px;
-  margin: var(--space2);
   border-radius: var(--space2);
   padding: var(--space1);
   background-color: var(--secondary);
