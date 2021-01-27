@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/cwyNSQlcC1gcx_Ak0W7h9/_buildManifest.js",
-    "static/cwyNSQlcC1gcx_Ak0W7h9/_ssgManifest.js"
+    "static/C-QQUBh8l-8S7iwBY1IUS/_buildManifest.js",
+    "static/C-QQUBh8l-8S7iwBY1IUS/_ssgManifest.js"
   ],
   "pages": {
     "/": [
@@ -15,8 +15,8 @@
       "static/chunks/framework.2113c6061a2f456066a1.js",
       "static/chunks/commons.c7b98e36156a493eaf36.js",
       "static/chunks/860b556b9c1627ec7c45df0eb68650d1ca47ddc0.92225ada3d780835337c.js",
-      "static/css/9c587150e9d07df2feaa.css",
-      "static/chunks/pages/index-3671566c7a664b646c3b.js"
+      "static/css/3e02feb6dcec94477817.css",
+      "static/chunks/pages/index-b5a3c51d7c0fde167d55.js"
     ],
     "/_app": [
       "static/chunks/main-f823a6f7c9365a2047e4.js",
@@ -40,7 +40,7 @@
       "static/chunks/commons.c7b98e36156a493eaf36.js",
       "static/chunks/860b556b9c1627ec7c45df0eb68650d1ca47ddc0.92225ada3d780835337c.js",
       "static/css/b609ca2268af4804b43d.css",
-      "static/chunks/pages/about-9d41848e758f4a188cda.js"
+      "static/chunks/pages/about-2d5cfd749ed140c72a24.js"
     ],
     "/contact": [
       "static/chunks/main-f823a6f7c9365a2047e4.js",
@@ -58,7 +58,7 @@
       "static/chunks/commons.c7b98e36156a493eaf36.js",
       "static/chunks/860b556b9c1627ec7c45df0eb68650d1ca47ddc0.92225ada3d780835337c.js",
       "static/css/bae8ef8a387355d47d22.css",
-      "static/chunks/pages/details/[ref]-ac90a80fa2bc85e97684.js"
+      "static/chunks/pages/details/[ref]-6268f92ceba82e3b42ff.js"
     ],
     "/visual-guide": [
       "static/chunks/main-f823a6f7c9365a2047e4.js",
@@ -66,8 +66,8 @@
       "static/chunks/framework.2113c6061a2f456066a1.js",
       "static/chunks/commons.c7b98e36156a493eaf36.js",
       "static/chunks/860b556b9c1627ec7c45df0eb68650d1ca47ddc0.92225ada3d780835337c.js",
-      "static/css/0f1029d80f05c84f3b58.css",
-      "static/chunks/pages/visual-guide-ec1c4a4b25dcae6285a0.js"
+      "static/css/67f6da19847090d6c505.css",
+      "static/chunks/pages/visual-guide-4395d5fa4d1dff40daaa.js"
     ]
   },
   "ampFirstPages": []
