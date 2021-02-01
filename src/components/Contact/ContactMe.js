@@ -74,9 +74,9 @@ export default function ContactMe() {
           Find me on linkedin
         </a>
       </div>
-
+{/* 
       <div className={styles.contact__item}>
-        <a className={styles.contact__item_link} href="">
+        <a className={styles.contact__item_link} href="/downloads/cv" download="CVRaulZarza">
           <div className={styles.contact__item_icon}>
             <Image
               src="/icons/curriculum.svg"
@@ -87,7 +87,7 @@ export default function ContactMe() {
           </div>
           Download my CV
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }

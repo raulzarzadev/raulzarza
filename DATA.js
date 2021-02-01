@@ -88,6 +88,12 @@ export const TECHS = [
     icon: "/icons/techs/jira-1.svg",
     ref: "JIRA",
   },
+  ,
+  {
+    title: "Firebase",
+    icon: "/icons/techs/firebase.png",
+    ref: "FIREBASE",
+  },
   {
     title: "BitBucket",
     icon: "/icons/techs/bitbucket-icon.svg",
@@ -98,7 +104,7 @@ export const TECHS = [
     icon: "/icons/techs/lamda.png",
     ref: "LAMDA",
   },
-  
+
   {
     title: "Inkascape",
     icon: "/icons/techs/inkascape.png",
@@ -132,26 +138,7 @@ export const WORKS = [
       ],
     },
   },
-  {
-    ref: "nomadas",
-    title: "nomadasgroup",
-    icon: "/icons/works/nomadas-negro.png",
-    url: "/details/nomadas",
-    resume: {
-      title: "nomadasgroup",
-      content: `
-      noamdasgroup es una pagina web estatica y la puerta de entrada a un grupo de servicios en torno al turismo y el turismo sustentable. 
-      Implementa tecnologia de contenedores para desarrollo y produccion, CSS puro, NEXTjs . `,
-      link: "https://www.nomadasgroup.com.mx",
-      technologies: ["NEXT", "REACT", "CSS", "JS", "DOCKER", "GIT"],
-      images: [
-        "/images/nomadas/NOMADAS.png",
-        "/images/nomadas/negro.png",
-        "/images/nomadas/NOMADA BLANCO.png",
-        "/images/nomadas/guia_nomadas.png",
-      ],
-    },
-  },
+
   {
     ref: "packshoe",
     title: "packshoe",
@@ -195,6 +182,44 @@ export const WORKS = [
       ],
     },
   },
+  {
+    ref: "rickAndMorty",
+    title: "Rick & Morty",
+    icon: "/images/rick&morty/r&m.png",
+    url: "/details/rickAndMorty",
+    resume: {
+      title: "Rick & Morty",
+      content: `Encuentra a tu personaje favorito de Rick And Morty en esta página web minimalista `,
+      link: "https://rick-and-morty.raulzarzadev.vercel.app/",
+      technologies: ["REACT", "CSS", "JS", "GIT"],
+      images: [
+        "/images/rick&morty/r&m1.png",
+        "/images/rick&morty/r&m2.png",
+        "/images/rick&morty/r&m3.png",
+      ],
+    },
+  },
+  {
+    ref: "nomadas",
+    title: "nomadasgroup",
+    icon: "/icons/works/nomadas-negro.png",
+    url: "/details/nomadas",
+    resume: {
+      title: "nomadasgroup",
+      content: `
+      noamdasgroup es una pagina web estatica y la puerta de entrada a un grupo de servicios en torno al turismo y el turismo sustentable. 
+      Implementa tecnologia de contenedores para desarrollo y produccion, CSS puro, NEXTjs . `,
+      link: "https://www.nomadasgroup.com.mx",
+      technologies: ["NEXT", "REACT", "CSS", "JS", "DOCKER", "GIT"],
+      images: [
+        "/images/nomadas/NOMADAS.png",
+        "/images/nomadas/negro.png",
+        "/images/nomadas/NOMADA BLANCO.png",
+        "/images/nomadas/guia_nomadas.png",
+      ],
+    },
+  },
+
   /*  {
     ref: "nadamas",
     title: "nadamas",
@@ -269,8 +294,15 @@ export const WORKS = [
   },
 ];
 
-export const LEARNING = [{
-  title: "GRAPHQL",
-  icon: "/icons/techs/graphql.svg",
-  ref: "GQL",
-},];
+export const LEARNING = [
+  {
+    title: "Firebase",
+    icon: "/icons/techs/firebase.png",
+    ref: "FIREBASE",
+  },
+  {
+    title: "GRAPHQL",
+    icon: "/icons/techs/graphql.svg",
+    ref: "GQL",
+  },
+];
