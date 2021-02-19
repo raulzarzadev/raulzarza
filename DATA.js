@@ -115,7 +115,7 @@ export const WORKS = [
   {
     ref: "ranchito",
     title: "Mi Ranchito Digital",
-    icon: "",
+    icon: "/images/ranchito/Logotipo.svg",
     url: "/details/ranchito",
     resume: {
       title: "Mi Ranchito Digital",
@@ -131,10 +131,9 @@ export const WORKS = [
       link: "https://miranchito.digital",
       technologies: ["NEXT"],
       images: [
-        "/images/ranchito/ranchito_1.png",
-        "/images/ranchito/ranchito.png",
-        "/images/ranchito/prox.png",
-        "/images/ranchito/history.png",
+        "/images/ranchito/rancho1.png",
+        "/images/ranchito/rancho2.png",
+        "/images/ranchito/rancho3.png",
       ],
     },
   },
