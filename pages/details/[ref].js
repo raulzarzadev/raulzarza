@@ -14,7 +14,9 @@ export default function Details() {
       <Head>
         <title>Work details</title>
       </Head>
-      <ButtonBack />
+      <div className='flex'>
+        <ButtonBack />
+      </div>
       <DetailsView data={data?.resume} />
     </>
   );
@@ -22,4 +24,4 @@ export default function Details() {
 
 Details.Layout = Layout;
 
- // In a file, far, far, away module.exports = function(dependencyA, dependencyB) { dependencyA(); dependencyB(); } // In another file, the `caller` // This is where the actual, concrete implementation is stonetworking var depA = someConcreteImplementation; var depB = someOtherConcreteImplementation; var someModule = require('pathToSomeModule'); someModule(depA, depB); 
+// In a file, far, far, away module.exports = function(dependencyA, dependencyB) { dependencyA(); dependencyB(); } // In another file, the `caller` // This is where the actual, concrete implementation is stonetworking var depA = someConcreteImplementation; var depB = someOtherConcreteImplementation; var someModule = require('pathToSomeModule'); someModule(depA, depB);

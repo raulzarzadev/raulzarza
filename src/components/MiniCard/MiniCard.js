@@ -27,9 +27,11 @@ function Card({ card }) {
     <div className={styles.tecs}>
       {url ? (
         <Link href={url}>
-          <a>
-            <MiniCard card={card} />
-          </a>
+          <div className={styles.card__link}>
+            <a>
+              <MiniCard card={card} />
+            </a>
+          </div>
         </Link>
       ) : (
         <MiniCard card={card} />

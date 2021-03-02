@@ -1,21 +1,30 @@
 .button {
-    border: none;
-    display: flex;
-    padding: var(--space2);
-    border-radius: var(--space2);
-    box-shadow: var(--box-shadow);
-    align-items: center;
+  border: none;
+  display: flex;
+  padding: var(--space1) var(--space2);
+  border-radius: var(--space2);
+  box-shadow: var(--box-shadow);
+  align-items: center;
+  cursor: pointer;
+  align-items: center;
+  background-color: var(--whait);
+}
+.button__icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space1);
 }
 
 .button:hover {
-    box-shadow: var(--box-shadow2);
+  box-shadow: var(--box-shadow2);
 }
 
 .button:active {
-    background-color: var(--secondary);
+  background-color: var(--secondary);
 }
 
 .button__text {
-    font-size: 1.2rem;
-    text-transform: uppercase;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }

@@ -1,25 +1,30 @@
 .abstract {
-    padding: 0 var(--space6);
+  padding: 0 var(--space6);
 }
 
 .abstract__title {
-    padding: 0 var(--space6);
-    color: var(--primary);
+  padding: 0 var(--space6);
+  color: var(--primary);
 }
 
 .abstract__subtitle {
-    text-align: center;
-    margin-bottom: var(--space4);
+  text-align: center;
+  margin-bottom: var(--space4);
 }
 
 .abstract__content {
-    text-align: center;
-    margin: var(--space5) 0;
+  text-align: center;
+  margin: var(--space5) 0;
+  max-width: 60%;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 600px) {
-    .abstract,
-    .abstract__title {
-        padding: 0 var(--space2);
-    }
+  .abstract__content {
+    max-width: 90%;
+  }
+  .abstract,
+  .abstract__title {
+    padding: 0 var(--space2);
+  }
 }

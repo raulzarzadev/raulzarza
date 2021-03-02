@@ -9,8 +9,7 @@
 } */
 
  .main {
-  background-image: url("/picina.jpg");
+  background-image: url("/fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(red, green, blue, 0.3);
 } 

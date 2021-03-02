@@ -7,7 +7,7 @@ export default function MainRow({ cards, title, learning }) {
     <div className={styles.section__index}>
       <div style={{ display: "flex", alignItems:"center" }}>
         <h4>{title}</h4>
-        {learning && <div className={styles.learning}></div>}
+        {learning && <div className={styles.learning}/>}
       </div>
 
       <div className={styles.section__index_row}>

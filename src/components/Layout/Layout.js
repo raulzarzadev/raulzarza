@@ -1,9 +1,8 @@
 import React from "react";
-import Footer from "../Footer/Footer";
 import Head from "next/head";
-import Header from "../Header/Header";
-import Image from "next/image";
 import styles from "./Layout.module.css";
+import Header from "./Header";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (

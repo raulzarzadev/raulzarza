@@ -3,27 +3,23 @@ import Image from "next/image";
 import styles from "./styles.module.css";
 import { TECHS } from "../../../DATA";
 export default function Details({ data = {} }) {
-  console.log(data);
   const usedTechs = data?.technologies?.map((usedTech) => {
-    return TECHS.find((tech) => tech.ref == usedTech);
+    return TECHS.find((tech) => tech?.ref == usedTech);
   });
-  console.log(usedTechs);
 
   return (
     <div className={styles.details}>
       <div className={styles.details__title}>
         <h2>{data.title}</h2>
       </div>
-       <div className={styles.details__link}>
+      <div className={styles.details__link}>
         <a href={data.link} className={styles.details__link_a}>
           Visit the site
           <Image src="/icons/link.svg" width={20} height={20} />
         </a>
       </div>
       <div className={styles.details__content}>
-        <p className={styles.details__content_description}>
-          {data.content}
-        </p>
+        <p className={styles.details__content_description}>{data.content}</p>
       </div>
 
       <div className={styles.details__techs}>
@@ -41,9 +37,10 @@ export default function Details({ data = {} }) {
         <h3 className={styles.details__images_title}>Some images</h3>
         <div className={styles.details__images_container}>
           {/* TODO Incluir un open image para ver la iamgen a en un modal */}
-          {data?.images?.map((img) => (
+          {data?.images?.map((img, i) => (
             <div className={styles.details__images_container_item}>
               <Image
+                key={i}
                 objectFit="contain"
                 src={img || "/"}
                 width={200}
@@ -53,7 +50,6 @@ export default function Details({ data = {} }) {
           ))}
         </div>
       </div>
-     
     </div>
   );
 }

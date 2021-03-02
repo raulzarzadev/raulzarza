@@ -1,4 +1,4 @@
-.tecs{
+.tecs {
   margin: var(--space2);
 }
 .tecs__card {
@@ -10,10 +10,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  box-shadow: var(--box-shadow);
 }
 
-.tecs__card_icon  {
+.tecs__card_icon {
   width: 90%;
   height: 60%;
   margin: 0 auto;
@@ -42,4 +41,12 @@
   height: 30%;
 }
 
+.card__link:hover {
+  box-shadow: var(--box-shadow);
+  border-radius: var(--space2);
+  cursor: pointer;
+}
+.card__link:active {
+  box-shadow: var(--box-shadow2);
+}
 /* TECS end */
