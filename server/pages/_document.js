@@ -88,10 +88,18 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ 1:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("5w0S");
+
+
+/***/ }),
 
 /***/ "2+G7":
 /***/ (function(module, exports) {
@@ -100,10 +108,61 @@ module.exports = require("styled-jsx/server");
 
 /***/ }),
 
-/***/ 8:
+/***/ "5w0S":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("8cZr");
+/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
+  static async getInitialProps(ctx) {
+    const initialProps = await next_document__WEBPACK_IMPORTED_MODULE_1___default.a.getInitialProps(ctx);
+    return _objectSpread({}, initialProps);
+  }
+
+  render() {
+    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_document__WEBPACK_IMPORTED_MODULE_1__["Html"], {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], {
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
+          href: "https://fonts.googleapis.com/css2?family=Lobster&display=swap",
+          rel: "stylesheet"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
+          href: "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
+          rel: "stylesheet"
+        })]
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("body", {
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {})]
+      })]
+    });
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (MyDocument);
+
+/***/ }),
+
+/***/ "8cZr":
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("VDXt");
+module.exports = __webpack_require__("VDXt")
 
 
 /***/ }),
@@ -116,6 +175,13 @@ exports.__esModule=true;exports.htmlEscapeJsonString=htmlEscapeJsonString;// Thi
 // License: https://github.com/zertosh/htmlescape/blob/0527ca7156a524d256101bb310a9f970f63078ad/LICENSE
 const ESCAPE_LOOKUP={'&':'\\u0026','>':'\\u003e','<':'\\u003c','\u2028':'\\u2028','\u2029':'\\u2029'};const ESCAPE_REGEX=/[&><\u2028\u2029]/g;function htmlEscapeJsonString(str){return str.replace(ESCAPE_REGEX,match=>ESCAPE_LOOKUP[match]);}
 //# sourceMappingURL=htmlescape.js.map
+
+/***/ }),
+
+/***/ "F5FC":
+/***/ (function(module, exports) {
+
+module.exports = require("react/jsx-runtime");
 
 /***/ }),
 
@@ -236,9 +302,9 @@ function dedupe(bundles) {
   return kept;
 }
 
-function getDocumentFiles(buildManifest, pathname) {
+function getDocumentFiles(buildManifest, pathname, inAmpMode) {
   const sharedFiles = (0, _getPageFiles.getPageFiles)(buildManifest, '/_app');
-  const pageFiles = (0, _getPageFiles.getPageFiles)(buildManifest, pathname);
+  const pageFiles = inAmpMode ? [] : (0, _getPageFiles.getPageFiles)(buildManifest, pathname);
   return {
     sharedFiles,
     pageFiles,
@@ -330,18 +396,23 @@ class Head extends _react.Component {
       cssFiles.push(...dynamicCssFiles);
     }
 
-    const cssLinkElements = [];
+    let cssLinkElements = [];
     cssFiles.forEach(file => {
       const isSharedFile = sharedFiles.has(file);
+
+      if (true) {
+        cssLinkElements.push( /*#__PURE__*/_react.default.createElement("link", {
+          key: `${file}-preload`,
+          nonce: this.props.nonce,
+          rel: "preload",
+          href: `${assetPrefix}/_next/${encodeURI(file)}${devOnlyCacheBusterQueryString}`,
+          as: "style",
+          crossOrigin: this.props.crossOrigin || undefined
+        }));
+      }
+
       const isUnmanagedFile = unmangedFiles.has(file);
       cssLinkElements.push( /*#__PURE__*/_react.default.createElement("link", {
-        key: `${file}-preload`,
-        nonce: this.props.nonce,
-        rel: "preload",
-        href: `${assetPrefix}/_next/${encodeURI(file)}${devOnlyCacheBusterQueryString}`,
-        as: "style",
-        crossOrigin: this.props.crossOrigin || undefined
-      }), /*#__PURE__*/_react.default.createElement("link", {
         key: file,
         nonce: this.props.nonce,
         rel: "stylesheet",
@@ -351,6 +422,9 @@ class Head extends _react.Component {
         "data-n-p": isUnmanagedFile ? undefined : isSharedFile ? undefined : ''
       }));
     });
+
+    if (false) {}
+
     return cssLinkElements.length === 0 ? null : cssLinkElements;
   }
 
@@ -380,19 +454,34 @@ class Head extends _react.Component {
   getPreloadMainLinks(files) {
     const {
       assetPrefix,
-      devOnlyCacheBusterQueryString
+      devOnlyCacheBusterQueryString,
+      scriptLoader
     } = this.context;
     const preloadFiles = files.allFiles.filter(file => {
       return file.endsWith('.js');
     });
-    return !preloadFiles.length ? null : preloadFiles.map(file => /*#__PURE__*/_react.default.createElement("link", {
+    return [...(scriptLoader.eager || []).map(file => /*#__PURE__*/_react.default.createElement("link", {
+      key: file.src,
+      nonce: this.props.nonce,
+      rel: "preload",
+      href: file.src,
+      as: "script",
+      crossOrigin: this.props.crossOrigin || undefined
+    })), ...preloadFiles.map(file => /*#__PURE__*/_react.default.createElement("link", {
       key: file,
       nonce: this.props.nonce,
       rel: "preload",
       href: `${assetPrefix}/_next/${encodeURI(file)}${devOnlyCacheBusterQueryString}`,
       as: "script",
       crossOrigin: this.props.crossOrigin || undefined
-    }));
+    })), ...(scriptLoader.defer || []).map(file => /*#__PURE__*/_react.default.createElement("link", {
+      key: file,
+      nonce: this.props.nonce,
+      rel: "preload",
+      href: file,
+      as: "script",
+      crossOrigin: this.props.crossOrigin || undefined
+    }))];
   }
 
   makeStylesheetInert(node) {
@@ -412,7 +501,7 @@ class Head extends _react.Component {
   }
 
   render() {
-    var _this$props$nonce;
+    var _this$props$nonce, _this$props$nonce2;
 
     const {
       styles,
@@ -423,13 +512,29 @@ class Head extends _react.Component {
       __NEXT_DATA__,
       dangerousAsPath,
       headTags,
-      unstable_runtimeJS
+      unstable_runtimeJS,
+      unstable_JsPreload
     } = this.context;
     const disableRuntimeJS = unstable_runtimeJS === false;
+    const disableJsPreload = unstable_JsPreload === false;
     this.context.docComponentsRendered.Head = true;
     let {
       head
     } = this.context;
+    let cssPreloads = [];
+    let otherHeadElements = [];
+
+    if (head) {
+      head.forEach(c => {
+        if (c && c.type === 'link' && c.props['rel'] === 'preload' && c.props['as'] === 'style') {
+          cssPreloads.push(c);
+        } else {
+          c && otherHeadElements.push(c);
+        }
+      });
+      head = cssPreloads.concat(otherHeadElements);
+    }
+
     let children = this.props.children; // show a warning if Head contains <title> (only in development)
 
     if (false) {}
@@ -502,7 +607,7 @@ class Head extends _react.Component {
       });
     }
 
-    const files = getDocumentFiles(this.context.buildManifest, this.context.__NEXT_DATA__.page);
+    const files = getDocumentFiles(this.context.buildManifest, this.context.__NEXT_DATA__.page, inAmpMode);
     return /*#__PURE__*/_react.default.createElement("head", this.props, this.context.isDevelopment && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("style", {
       "data-next-hide-fouc": true,
       "data-ampdevmode": inAmpMode ? 'true' : undefined,
@@ -550,9 +655,9 @@ class Head extends _react.Component {
     })), !inAmpMode && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !hasAmphtmlRel && hybridAmp && /*#__PURE__*/_react.default.createElement("link", {
       rel: "amphtml",
       href: canonicalBase + getAmpPath(ampPath, dangerousAsPath)
-    }),  false ? undefined : this.getCssLinks(files), /*#__PURE__*/_react.default.createElement("noscript", {
+    }),  true && this.getCssLinks(files),  true && /*#__PURE__*/_react.default.createElement("noscript", {
       "data-n-css": (_this$props$nonce = this.props.nonce) != null ? _this$props$nonce : ''
-    }), !disableRuntimeJS && this.getPreloadDynamicChunks(), !disableRuntimeJS && this.getPreloadMainLinks(files), this.context.isDevelopment &&
+    }), !disableRuntimeJS && !disableJsPreload && this.getPreloadDynamicChunks(), !disableRuntimeJS && !disableJsPreload && this.getPreloadMainLinks(files),  false && false,  false && /*#__PURE__*/false, this.context.isDevelopment &&
     /*#__PURE__*/
     // this element is used to mount development styles so the
     // ordering matches production
@@ -609,6 +714,18 @@ class NextScript extends _react.Component {
         nonce: this.props.nonce,
         crossOrigin: this.props.crossOrigin || undefined
       });
+    });
+  }
+
+  getPreNextScripts() {
+    const {
+      scriptLoader
+    } = this.context;
+    return (scriptLoader.eager || []).map(file => {
+      return /*#__PURE__*/_react.default.createElement("script", Object.assign({}, file, {
+        nonce: this.props.nonce,
+        crossOrigin: this.props.crossOrigin || undefined
+      }));
     });
   }
 
@@ -685,7 +802,7 @@ class NextScript extends _react.Component {
         return null;
       }
 
-      const ampDevFiles = [...buildManifest.devFiles, ...buildManifest.ampDevFiles];
+      const ampDevFiles = [...buildManifest.devFiles, ...buildManifest.polyfillFiles, ...buildManifest.ampDevFiles];
       return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, disableRuntimeJS ? null : /*#__PURE__*/_react.default.createElement("script", {
         id: "__NEXT_DATA__",
         type: "application/json",
@@ -706,7 +823,7 @@ class NextScript extends _react.Component {
 
     if (false) {}
 
-    const files = getDocumentFiles(this.context.buildManifest, this.context.__NEXT_DATA__.page);
+    const files = getDocumentFiles(this.context.buildManifest, this.context.__NEXT_DATA__.page, inAmpMode);
     return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !disableRuntimeJS && buildManifest.devFiles ? buildManifest.devFiles.map(file => /*#__PURE__*/_react.default.createElement("script", {
       key: file,
       src: `${assetPrefix}/_next/${encodeURI(file)}${devOnlyCacheBusterQueryString}`,
@@ -720,7 +837,7 @@ class NextScript extends _react.Component {
       dangerouslySetInnerHTML: {
         __html: NextScript.getInlineScriptSource(this.context)
       }
-    }), !disableRuntimeJS && this.getPolyfillScripts(), disableRuntimeJS ? null : this.getDynamicChunks(files), disableRuntimeJS ? null : this.getScripts(files));
+    }), !disableRuntimeJS && this.getPolyfillScripts(), !disableRuntimeJS && this.getPreNextScripts(), disableRuntimeJS ? null : this.getDynamicChunks(files), disableRuntimeJS ? null : this.getScripts(files));
   }
 
 }
