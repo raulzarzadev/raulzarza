@@ -9,7 +9,8 @@
 } */
 
  .main {
-  background-image: url("/fondo.png");
+  background-color: var(--primary-light);
+  background-image: url("/fondo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 } 
