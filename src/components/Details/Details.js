@@ -1,11 +1,13 @@
-import React from "react";
-import Image from "next/image";
-import styles from "./styles.module.css";
-import { TECHS } from "../../../DATA";
+import React from 'react'
+import Image from 'next/image'
+import styles from './styles.module.css'
+import { TECHS } from '../../../DATA'
 export default function Details({ data = {} }) {
   const usedTechs = data?.technologies?.map((usedTech) => {
-    return TECHS.find((tech) => tech?.ref == usedTech);
-  });
+    return TECHS.find((tech) => tech?.ref == usedTech)
+  })
+
+  console.log(data)
 
   return (
     <div className={styles.details}>
@@ -13,10 +15,20 @@ export default function Details({ data = {} }) {
         <h2>{data.title}</h2>
       </div>
       <div className={styles.details__link}>
-        <a href={data.link} className={styles.details__link_a}>
+        <a href={data.link} className={styles.details__link_a} target="_blank">
           Visit the site
           <Image src="/icons/link.svg" width={20} height={20} />
         </a>
+        {data?.repos?.map((repo) => (
+          <a
+            href={repo?.href}
+            className={styles.details__link_a}
+            target="_blank"
+          >
+            Visit the {repo?.label} repo'
+            <Image src="/icons/link.svg" width={20} height={20} />
+          </a>
+        ))}
       </div>
       <div className={styles.details__content}>
         <p className={styles.details__content_description}>{data.content}</p>
@@ -27,7 +39,7 @@ export default function Details({ data = {} }) {
         <div className={styles.details__techs_container}>
           {usedTechs?.map((tech) => (
             <div className={styles.details__techs_container_item}>
-              <Image src={tech?.icon || "/"} height={60} width={60} />
+              <Image src={tech?.icon || '/'} height={60} width={60} />
               <h6>{tech?.title}</h6>
             </div>
           ))}
@@ -42,7 +54,7 @@ export default function Details({ data = {} }) {
               <Image
                 key={i}
                 objectFit="contain"
-                src={img || "/"}
+                src={img || '/'}
                 width={200}
                 height={200}
               />
@@ -51,5 +63,5 @@ export default function Details({ data = {} }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

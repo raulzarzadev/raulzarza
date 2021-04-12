@@ -127,9 +127,16 @@ export const WORKS = [
       `,
       link: 'https://talent-market-front.vercel.app/',
       technologies: ['NEXT', 'DOCKER', 'EXP', 'NODE'],
-      images: [
-        '/images/talent/map.png',
-        '/images/talent/market.png',
+      images: ['/images/talent/map.png', '/images/talent/market.png'],
+      repos: [
+        {
+          href: 'https://github.com/raulzarzadev/talent-market-front',
+          label: 'React Frontend',
+        },
+        {
+          href: 'https://github.com/raulzarzadev/talent-market-backend',
+          label: 'Backend ',
+        },
       ],
     },
   },
@@ -138,6 +145,7 @@ export const WORKS = [
     title: 'Mi Ranchito Digital',
     icon: '/images/ranchito/Logotipo.svg',
     url: '/details/ranchito',
+
     resume: {
       title: 'Mi Ranchito Digital',
       content: `
