@@ -10,106 +10,111 @@ export const ABOUT_ME = {
      Hiking, mountaineering, camping, city or mountain bike, he recently 
     discovered sandboarding in the sand dunes of La Paz, B.C.S.`,
 
-  images: [],
+  images: []
 }
 export const TECHS = [
   {
     title: 'HTML 5',
     icon: '/icons/techs/html-5.svg',
-    ref: 'HMTL',
+    ref: 'HMTL'
   },
   {
     title: 'CSS3',
     icon: '/icons/techs/css-5.svg',
-    ref: 'CSS',
+    ref: 'CSS'
   },
   {
     title: 'Javascript',
     icon: '/icons/techs/javascript-1.svg',
-    ref: 'JS',
+    ref: 'JS'
   },
   {
     title: 'Git',
     icon: '/icons/techs/git.png',
-    ref: 'GIT',
+    ref: 'GIT'
   },
   {
     title: 'Node.js',
     icon: '/icons/techs/node.svg',
-    ref: 'NODE',
+    ref: 'NODE'
   },
   {
     title: 'Reactjs',
     icon: '/icons/techs/react-2.svg',
-    ref: 'REACT',
+    ref: 'REACT'
   },
   {
     title: 'React-router',
     icon: '/icons/techs/react-router.svg',
-    ref: 'REACT_ROUTER',
+    ref: 'REACT_ROUTER'
   },
   {
     title: 'Nextjs',
     icon: '/icons/techs/nextjs-3.svg',
-    ref: 'NEXT',
+    ref: 'NEXT'
   },
   {
     title: 'MaterialUI',
     icon: '/icons/techs/material-ui.svg',
-    ref: 'MUI',
+    ref: 'MUI'
   },
   {
     title: 'Express',
     icon: '/icons/techs/express-109.svg',
-    ref: 'EXP',
+    ref: 'EXP'
   },
   {
     title: 'MongoDB',
     icon: '/icons/techs/mongodb.svg',
-    ref: 'MONGO',
+    ref: 'MONGO'
   },
   {
     title: 'ningx',
     icon: '/icons/techs/nginx-1.svg',
-    ref: 'NGINX',
+    ref: 'NGINX'
   },
   {
     title: 'Docker',
     icon: '/icons/techs/docker.png',
-    ref: 'DOCKER',
+    ref: 'DOCKER'
   },
   {
     title: 'Docker-compose',
     icon: '/icons/techs/docker-compose.png',
-    ref: 'DC',
+    ref: 'DC'
   },
   {
     title: 'Jira',
     icon: '/icons/techs/jira-1.svg',
-    ref: 'JIRA',
+    ref: 'JIRA'
   },
   ,
   {
     title: 'Firebase',
     icon: '/icons/techs/firebase.png',
-    ref: 'FIREBASE',
+    ref: 'FIREBASE'
   },
   {
     title: 'BitBucket',
     icon: '/icons/techs/bitbucket-icon.svg',
-    ref: 'BB',
+    ref: 'BB'
   },
   {
     title: 'AWS Lamda',
     icon: '/icons/techs/lamda.png',
-    ref: 'LAMDA',
+    ref: 'LAMDA'
   },
 
   {
     title: 'Inkascape',
     icon: '/icons/techs/inkascape.png',
-    ref: 'INKA',
+    ref: 'INKA'
   },
+  {
+    title: 'GRAPHQL',
+    icon: '/icons/techs/graphql.svg',
+    ref: 'GQL'
+  }
 ]
 export const WORKS = [
   {
@@ -131,14 +136,14 @@ export const WORKS = [
       repos: [
         {
           href: 'https://github.com/raulzarzadev/talent-market-front',
-          label: 'React Frontend',
+          label: 'React Frontend'
         },
         {
           href: 'https://github.com/raulzarzadev/talent-market-backend',
-          label: 'Backend ',
-        },
-      ],
-    },
+          label: 'Backend '
+        }
+      ]
+    }
   },
   {
     ref: 'ranchito',
@@ -149,52 +154,69 @@ export const WORKS = [
     resume: {
       title: 'Mi Ranchito Digital',
       content: `
-      El problema:
-      Un veterinario/granjero olvida las fechas en las que su vaca lechera debe parir o ser inseminada
-      Propuesta: 
-      Mantener informado al veterinario/granjero de las datos importantes para relizar un mejor trabajo 
-      Consideraciones:
-      - Debe ser extremadamente sencillo
-      - Trabajar sin conexión
+      A half-freelance and half-personal project.             
+      
+      A farmer loses a lot of money when
+       he cannot predict the reproductive 
+       cycle of a cow, this problem is 
+       greater when they are mini cows and it is 
+      difficult to have a paper record.
+
+      These farmers cannot afford a 
+      sophisticated and expensive system. 
+      Mainly because that means paying a 
+      lot of money for software and protections. 
+
+      And for a limited number of cows, this may be unfeasible. 
       `,
       link: 'https://miranchito.digital',
-      technologies: ['NEXT'],
+      technologies: ['NEXT', 'FIREBASE', 'JS'],
       images: [
         '/images/ranchito/rancho1.png',
         '/images/ranchito/rancho2.png',
-        '/images/ranchito/rancho3.png',
+        '/images/ranchito/rancho3.png'
       ],
-    },
+      repos: [
+        {
+          href: 'https://github.com/raulzarzadev/mi-ranchito',
+          label: 'Next and Firebase'
+        }
+      ]
+    }
   },
-
   {
-    ref: 'packshoe',
-    title: 'packshoe',
-    icon: '/icons/works/navBarBanner.png',
-    url: '/details/packshoe',
+    ref: 'negocios-next',
+    title: 'negocios del barrio (nextjs)',
+    icon: '/images/negocios/logotipo-next.png',
+    url: '/details/negocios-next',
     resume: {
-      title: 'Packshoe',
-      content: `Packshoe es es una SPA que permite unir a zapateros con clientes`,
-      link: 'https://www.packshoe.com',
-      technologies: ['LAMDA', 'BB', 'REACT', 'MUI', 'GQL'],
+      title: 'Negocios del Barrio (NEXT.js)',
+      content: `Version 2. This is done with firebase to save development time, improve security, and make it easier for the user to join and manage their preferences.`,
+      link: 'https://www.negociosdelbarrio.com',
+      technologies: ['REACT', 'NEXT', 'FIREBASE', 'GIT', 'JS'],
       images: [
-        '/images/packshoe/build-repair.png',
-        '/images/packshoe/packshoe-insta.png',
-        '/images/packshoe/packshoe-openbox.png',
-        '/images/packshoe/select-item.png',
+        '/images/negocios/curvas.svg',
+        '/images/negocios/logotipo-next.png'
       ],
-    },
+      repos: [
+        {
+          href: 'https://github.com/raulzarzadev/negocios-nextjs',
+          label: 'nextjs negocios'
+        }
+      ]
+    }
   },
   {
     ref: 'negocios',
-    title: 'negocios del barrio',
-    icon: '/icons/works/NegDelBar.png',
+    title: 'negocios del barrio (services)',
+    icon: '/images/negocios/NegDelBar.png',
     url: '/details/negocios',
     resume: {
       title: 'Negocios del Barrio',
-      content: `negocioasdelbarrio.com.mx nace con la idea de facilitar el comercio local y aprovechar todas las ventajas que este representa, al hacer mas facil publicar un anuncio en un barrio especifico.   `,
+      content: `A personal project. An SPA focused on making small and locals businesses easier to find on the web. Businesses near you`,
       link: 'https://www.negociosdelbarrio.com',
       technologies: [
+        'DOCKER',
         'REACT',
         'MUI',
         'NODE',
@@ -202,13 +224,37 @@ export const WORKS = [
         'EXP',
         'NGINX',
         'GIT',
-        'JS',
+        'JS'
       ],
       images: [
         '/images/negocios/NegDelBar.png',
-        '/images/negocios/negdelbar-villas.png',
+        '/images/negocios/negdelbar-villas.png'
       ],
-    },
+      repos: [
+        {
+          href: 'https://github.com/raulzarzadev/negocios',
+          label: 'negocios (services)'
+        }
+      ]
+    }
+  },
+  {
+    ref: 'packshoe',
+    title: 'packshoe',
+    icon: '/icons/works/navBarBanner.png',
+    url: '/details/packshoe',
+    resume: {
+      title: 'Packshoe',
+      content: `An SPA focused in join shoemakers and peapole with shoes wath need a fix or preventive care`,
+      link: 'https://www.packshoe.com',
+      technologies: ['LAMDA', 'BB', 'REACT', 'MUI', 'GQL'],
+      images: [
+        '/images/packshoe/build-repair.png',
+        '/images/packshoe/packshoe-insta.png',
+        '/images/packshoe/packshoe-openbox.png',
+        '/images/packshoe/select-item.png'
+      ]
+    }
   },
   {
     ref: 'rickAndMorty',
@@ -217,17 +263,46 @@ export const WORKS = [
     url: '/details/rickAndMorty',
     resume: {
       title: 'Rick & Morty',
-      content: `Encuentra a tu personaje favorito de Rick And Morty en esta página web minimalista `,
+      content: `You can search your favorite character from Rick and Morti. Easly and minimalist tool usign an popular API`,
       link: 'https://rick-and-morty.raulzarzadev.vercel.app/',
       technologies: ['REACT', 'CSS', 'JS', 'GIT'],
       images: [
         '/images/rick&morty/r&m1.png',
         '/images/rick&morty/r&m2.png',
-        '/images/rick&morty/r&m3.png',
+        '/images/rick&morty/r&m3.png'
       ],
-    },
+      repos: [
+        {
+          href: 'https://github.com/raulzarzadev/rick-and-morty',
+          label: 'Rick & Morty'
+        }
+      ]
+    }
   },
   {
+    ref: 'raulzarza',
+    title: 'RZ Personal Page',
+    icon: '/icons/works/RZ-blanco.svg',
+    url: '/details/raulzarza',
+    resume: {
+      title: 'RZ Personal Page',
+      content:
+        'My personal page. Build with next.js and css modules. Some other versions was maked with react, node , docker and nginx',
+      link: 'https://www.raulzarza.com',
+      technologies: ['NEXT', 'CSS'],
+      images: [
+        '/images/rz/rz-page.png',
+        '/images/rz/logo.png',
+        '/images/rz/logo-color-test.png',
+        '/images/rz/logo-test-box.png',
+        '/images/rz/logo-test.png'
+      ],
+      repos: [
+        { href: 'https://github.com/raulzarzadev/raulzarza', label: 'RZ v.2' }
+      ]
+    }
+  },
+  /*  {
     ref: 'nomadas',
     title: 'nomadasgroup',
     icon: '/icons/works/nomadas-negro.png',
@@ -243,10 +318,10 @@ export const WORKS = [
         '/images/nomadas/NOMADAS.png',
         '/images/nomadas/negro.png',
         '/images/nomadas/NOMADA BLANCO.png',
-        '/images/nomadas/guia_nomadas.png',
-      ],
-    },
-  },
+        '/images/nomadas/guia_nomadas.png'
+      ]
+    }
+  }, */
 
   /*  {
     ref: "nadamas",
@@ -285,10 +360,10 @@ export const WORKS = [
         '/images/negrin/negrin1.png',
         '/images/negrin/lanegrin-outside.png',
         '/images/negrin/negrin2.png',
-        '/images/negrin/queso_y_huevos.png',
-      ],
-    },
-  },
+        '/images/negrin/queso_y_huevos.png'
+      ]
+    }
+  }
   /* {
     ref: "pirules",
     title: "Cremeria Pirules",
@@ -300,37 +375,17 @@ export const WORKS = [
       link: "https://www.cremeriapirules.com",
     },
   }, */
-  {
-    ref: 'raulzarza',
-    title: 'RZ Personal Page',
-    icon: '/icons/works/RZ-blanco.svg',
-    url: '/details/raulzarza',
-    resume: {
-      title: 'RZ Personal Page',
-      content:
-        'Mi portafolio persional creado desde cero, implementando SSR con NEXT y CSS module, ademas de usar Docker y nginx para hospedarlo en la nuve.',
-      link: 'https://www.raulzarza.com',
-      technologies: ['GIT', 'JS', 'REACT', 'NEXT', 'DOCKER', 'DC', 'NODE'],
-      images: [
-        '/images/rz/rz-page.png',
-        '/images/rz/logo.png',
-        '/images/rz/logo-color-test.png',
-        '/images/rz/logo-test-box.png',
-        '/images/rz/logo-test.png',
-      ],
-    },
-  },
 ]
 
 export const LEARNING = [
   {
     title: 'Firebase',
     icon: '/icons/techs/firebase.png',
-    ref: 'FIREBASE',
+    ref: 'FIREBASE'
   },
   {
     title: 'GRAPHQL',
     icon: '/icons/techs/graphql.svg',
-    ref: 'GQL',
-  },
+    ref: 'GQL'
+  }
 ]

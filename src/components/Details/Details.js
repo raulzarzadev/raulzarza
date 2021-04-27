@@ -21,6 +21,7 @@ export default function Details({ data = {} }) {
         </a>
         {data?.repos?.map((repo) => (
           <a
+          key={repo.href}
             href={repo?.href}
             className={styles.details__link_a}
             target="_blank"
@@ -38,7 +39,7 @@ export default function Details({ data = {} }) {
         <h3 className={styles.details__techs_title}>Used technologies</h3>
         <div className={styles.details__techs_container}>
           {usedTechs?.map((tech) => (
-            <div className={styles.details__techs_container_item}>
+            <div key={tech?.ref} className={styles.details__techs_container_item}>
               <Image src={tech?.icon || '/'} height={60} width={60} />
               <h6>{tech?.title}</h6>
             </div>
