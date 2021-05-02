@@ -1,5 +1,5 @@
-import connectDB from "../../middleware/mongodb"
-import Job from "../../models/Job"
+import connectDB from '../../middleware/mongodb'
+import Job from '../../models/Job'
 
 /* import connectDB from '../../middleware/mongodb'
 import bcrypt from '../../middleware/bcrypt'
@@ -8,8 +8,8 @@ import User from '../../models/user'
 const getJobs = async (req, res) => {
   const jobs = await Job.find()
   console.log('jobs', jobs)
-  return jobs
- /*  
+  return res.json(jobs)
+  /*  
   if (req.method === 'POST') {
     // Check if name, email or password is provided
     const { name, email, password } = req.body

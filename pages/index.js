@@ -10,11 +10,18 @@ import { LEARNING } from '../DATA'
 
 import Section from '../src/components/Section'
 import { useEffect } from 'react'
-
+const fetching = async (url) => {
+  const res = await fetch(url)
+    .then((res) => res.json())
+    .catch((err) => console.log('err', err))
+  return res
+}
 export default function Home() {
   useEffect(() => {
-    fetch('/api/jobs')
-      .then((res) => res.json())
+    console.log('a')
+    
+    fetching('/api/jobs')
+      .then((res) => console.log('res', res))
       .catch((err) => console.log('err', err))
   }, [])
   return (
