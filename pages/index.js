@@ -1,16 +1,22 @@
-import Head from "next/head";
-import Abstract from "../src/components/Abstract";
-import Layout from "../src/components/Layout/Layout";
-import MainRow from "../src/components/MainRow";
-import MyLink from "../src/components/MyLink/MyLink";
+import Head from 'next/head'
+import Abstract from '../src/components/Abstract'
+import Layout from '../src/components/Layout/Layout'
+import MainRow from '../src/components/MainRow'
+import MyLink from '../src/components/MyLink/MyLink'
 
-import { TECHS } from "../DATA";
-import { WORKS } from "../DATA";
-import { LEARNING } from "../DATA";
+import { TECHS } from '../DATA'
+import { WORKS } from '../DATA'
+import { LEARNING } from '../DATA'
 
-import Section from "../src/components/Section";
+import Section from '../src/components/Section'
+import { useEffect } from 'react'
 
 export default function Home() {
+  useEffect(() => {
+    fetch('/api/jobs')
+      .then((res) => res.json())
+      .catch((err) => console.log('err', err))
+  }, [])
   return (
     <div>
       <Head>
@@ -41,7 +47,7 @@ export default function Home() {
         </section>
       </div>
     </div>
-  );
+  )
 }
 
-Home.Layout = Layout;
+Home.Layout = Layout
