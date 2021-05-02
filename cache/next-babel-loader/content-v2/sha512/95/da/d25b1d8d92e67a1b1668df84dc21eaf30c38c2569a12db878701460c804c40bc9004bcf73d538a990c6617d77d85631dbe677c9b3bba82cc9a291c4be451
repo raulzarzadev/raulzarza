@@ -1,0 +1,1 @@
+{"ast":null,"code":"import mongoose from 'mongoose';\nconst Schema = mongoose.Schema;\nconst job = new Schema({\n  name: {\n    type: String,\n    required: true\n  }\n});\nmongoose.models = {};\nconst Job = mongoose.model('Job', job);\nexport default Job;","map":null,"metadata":{},"sourceType":"module"}

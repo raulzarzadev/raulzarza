@@ -1,7 +1,7 @@
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = require('../ssr-module-cache.js');
+/******/ 	var installedModules = require('../../ssr-module-cache.js');
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -88,146 +88,107 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "/a9y":
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("Jw51");
+
+
+/***/ }),
+
+/***/ "FiKB":
+/***/ (function(module, exports) {
+
+module.exports = require("mongoose");
+
+/***/ }),
+
+/***/ "Jw51":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: external "mongoose"
+var external_mongoose_ = __webpack_require__("FiKB");
+var external_mongoose_default = /*#__PURE__*/__webpack_require__.n(external_mongoose_);
+
+// CONCATENATED MODULE: ./middleware/mongodb.js
 
 
-var _interopRequireDefault = __webpack_require__("AroE");
+const connectDB = handler => async (req, res) => {
+  if (external_mongoose_default.a.connections[0].readyState) {
+    // Use current db connection
+    return handler(req, res);
+  } // Use new db connection
 
-exports.__esModule = true;
-exports.default = void 0;
 
-var _react = _interopRequireDefault(__webpack_require__("cDcd"));
-
-var _head = _interopRequireDefault(__webpack_require__("UlpK"));
-
-const statusCodes = {
-  400: 'Bad Request',
-  404: 'This page could not be found',
-  405: 'Method Not Allowed',
-  500: 'Internal Server Error'
+  await external_mongoose_default.a.connect(process.env.NEXT_PUBLIC_RZ_DB, {
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
+    useNewUrlParser: true
+  });
+  return handler(req, res);
 };
 
-function _getInitialProps({
-  res,
-  err
-}) {
-  const statusCode = res && res.statusCode ? res.statusCode : err ? err.statusCode : 404;
-  return {
-    statusCode
-  };
-}
-/**
-* `Error` component used for handling errors.
-*/
+/* harmony default export */ var mongodb = (connectDB);
+// CONCATENATED MODULE: ./models/Job.js
 
-
-class Error extends _react.default.Component {
-  render() {
-    const {
-      statusCode
-    } = this.props;
-    const title = this.props.title || statusCodes[statusCode] || 'An unexpected error has occurred';
-    return /*#__PURE__*/_react.default.createElement("div", {
-      style: styles.error
-    }, /*#__PURE__*/_react.default.createElement(_head.default, null, /*#__PURE__*/_react.default.createElement("title", null, statusCode, ": ", title)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("style", {
-      dangerouslySetInnerHTML: {
-        __html: 'body { margin: 0 }'
-      }
-    }), statusCode ? /*#__PURE__*/_react.default.createElement("h1", {
-      style: styles.h1
-    }, statusCode) : null, /*#__PURE__*/_react.default.createElement("div", {
-      style: styles.desc
-    }, /*#__PURE__*/_react.default.createElement("h2", {
-      style: styles.h2
-    }, title, "."))));
+const Schema = external_mongoose_default.a.Schema;
+const job = new Schema({
+  name: {
+    type: String,
+    required: true
   }
+});
+external_mongoose_default.a.models = {};
+const Job = external_mongoose_default.a.model('Job', job);
+/* harmony default export */ var models_Job = (Job);
+// CONCATENATED MODULE: ./pages/api/jobs.js
 
-}
 
-exports.default = Error;
-Error.displayName = 'ErrorPage';
-Error.getInitialProps = _getInitialProps;
-Error.origGetInitialProps = _getInitialProps;
-const styles = {
-  error: {
-    color: '#000',
-    background: '#fff',
-    fontFamily: '-apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Fira Sans", Avenir, "Helvetica Neue", "Lucida Grande", sans-serif',
-    height: '100vh',
-    textAlign: 'center',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  desc: {
-    display: 'inline-block',
-    textAlign: 'left',
-    lineHeight: '49px',
-    height: '49px',
-    verticalAlign: 'middle'
-  },
-  h1: {
-    display: 'inline-block',
-    borderRight: '1px solid rgba(0, 0, 0,.3)',
-    margin: 0,
-    marginRight: '20px',
-    padding: '10px 23px 10px 0',
-    fontSize: '24px',
-    fontWeight: 500,
-    verticalAlign: 'top'
-  },
-  h2: {
-    fontSize: '14px',
-    fontWeight: 'normal',
-    lineHeight: 'inherit',
-    margin: 0,
-    padding: 0
-  }
+/* import connectDB from '../../middleware/mongodb'
+import bcrypt from '../../middleware/bcrypt'
+import User from '../../models/user'
+ */
+
+const getJobs = async (req, res) => {
+  const jobs = await models_Job.find();
+  console.log('jobs', jobs);
+  return jobs;
+  /*  
+   if (req.method === 'POST') {
+     // Check if name, email or password is provided
+     const { name, email, password } = req.body
+     if (name && email && password) {
+       try {
+         // Hash password to store it in DB
+         var passwordhash = await bcrypt.sign(password)
+         var job = new Job({
+           name
+         })
+         // Create new job
+         var jobcreated = await job.save()
+         return res.status(200).send(jobcreated)
+       } catch (error) {
+         return res.status(500).send(error.message)
+       }
+     } else {
+       res.status(422).send('data_incomplete')
+     }
+   } else {
+     res.status(422).send('req_method_not_supported')
+   } */
 };
 
-/***/ }),
-
-/***/ 9:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("/a9y");
-
-
-/***/ }),
-
-/***/ "AroE":
-/***/ (function(module, exports) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-
-/***/ "UlpK":
-/***/ (function(module, exports) {
-
-module.exports = require("next/dist/next-server/lib/head.js");
-
-/***/ }),
-
-/***/ "cDcd":
-/***/ (function(module, exports) {
-
-module.exports = require("react");
+/* harmony default export */ var api_jobs = __webpack_exports__["default"] = (mongodb(getJobs));
 
 /***/ })
 

@@ -3,6 +3,7 @@
   "/_document": "pages/_document.js",
   "/about": "pages/about.html",
   "/api/hello": "pages/api/hello.js",
+  "/api/jobs": "pages/api/jobs.js",
   "/contact": "pages/contact.html",
   "/details/[ref]": "pages/details/[ref].html",
   "/": "pages/index.html",
