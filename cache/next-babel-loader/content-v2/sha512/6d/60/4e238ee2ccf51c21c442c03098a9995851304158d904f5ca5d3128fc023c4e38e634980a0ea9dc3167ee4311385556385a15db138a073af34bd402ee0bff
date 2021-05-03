@@ -1,0 +1,1 @@
+{"ast":null,"code":"import connectDB from '../../middleware/mongodb';\nimport Job from '../../models/Job';\n\nconst getJobs = async (req, res) => {\n  const jobs = await Job.find();\n  return res.json(jobs);\n};\n\nexport default connectDB(getJobs);","map":null,"metadata":{},"sourceType":"module"}
