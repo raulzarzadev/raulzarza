@@ -49,6 +49,11 @@ export const TECHS = [
     ref: 'REACT_ROUTER'
   },
   {
+    title: 'JsonWebTokens',
+    icon: '/icons/techs/JWT.svg',
+    ref: 'JWT'
+  },
+  {
     title: 'Nextjs',
     icon: '/icons/techs/nextjs-3.svg',
     ref: 'NEXT'
@@ -299,6 +304,26 @@ export const WORKS = [
       ],
       repos: [
         { href: 'https://github.com/raulzarzadev/raulzarza', label: 'RZ v.2' }
+      ]
+    }
+  },
+  {
+    ref: 'auth-service',
+    title: 'Authentication Service',
+    icon: '/images/auth/auth-doc.png',
+    url: '/details/auth-service',
+    resume: {
+      title: 'Authentication Service',
+      content:
+        'A two-step authentication service built with node, express, JWT, and a small UI.\n The main idea is to develop a reusable authentication service for many applications that can be deployed in one place.',
+      link: 'https://www.raulzarza.com',
+      technologies: ['NODE', 'DOCKER', 'JWT', 'MONGO', 'EXP', 'NGINX', 'CSS'],
+      images: ['/images/auth/auth-doc.png', '/images/auth/auth-ui.png'],
+      repos: [
+        {
+          href: 'https://github.com/raulzarzadev/auth-service',
+          label: 'Auth-service'
+        }
       ]
     }
   },

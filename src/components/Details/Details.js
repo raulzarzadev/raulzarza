@@ -7,7 +7,6 @@ export default function Details({ data = {} }) {
     return TECHS.find((tech) => tech?.ref == usedTech)
   })
 
-  console.log(data)
 
   return (
     <div className={styles.details}>

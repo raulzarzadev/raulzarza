@@ -5,11 +5,11 @@ import MainRow from '../src/components/MainRow'
 import MyLink from '../src/components/MyLink/MyLink'
 
 import { TECHS } from '../DATA'
-import { WORKS } from '../DATA'
-import { LEARNING } from '../DATA'
+/* import { WORKS } from '../DATA'
+ */ import { LEARNING } from '../DATA'
 
 import Section from '../src/components/Section'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 const fetching = async (url) => {
   const res = await fetch(url)
     .then((res) => res.json())
@@ -18,12 +18,13 @@ const fetching = async (url) => {
 }
 export default function Home() {
   useEffect(() => {
-    console.log('a')
-    
+
     fetching('/api/jobs')
-      .then((res) => console.log('res', res))
+      .then(setJobs)
       .catch((err) => console.log('err', err))
   }, [])
+
+  const [jobs, setJobs] = useState([])
   return (
     <div>
       <Head>
@@ -35,7 +36,7 @@ export default function Home() {
         </section>
 
         <section>
-          <MainRow cards={WORKS} title="Some of my works" />
+          <MainRow cards={jobs} title="Some of my works" />
         </section>
         <section>
           <MainRow
