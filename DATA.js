@@ -409,6 +409,11 @@ export const LEARNING = [
     ref: 'FIREBASE'
   },
   {
+    title: 'Typescript',
+    icon: '/icons/techs/typescript.png',
+    ref: 'TYPESCRIPT'
+  },
+  {
     title: 'GRAPHQL',
     icon: '/icons/techs/graphql.svg',
     ref: 'GQL'
