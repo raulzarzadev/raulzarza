@@ -146,6 +146,9 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
           href: "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
           rel: "stylesheet"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+          name: "description",
+          content: "My personal page where you can learn more about my and contactme"
         })]
       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("body", {
         children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {})]
