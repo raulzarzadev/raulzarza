@@ -19,6 +19,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
             rel="stylesheet"
           />
+          <meta name='description' content='My personal page where you can learn more about my and contactme'/>
         </Head>
         <body>
           <Main />
